@@ -1,15 +1,14 @@
 #!/usr/bin/node
 
-const size = parseInt(process.argv[2]);
+function add(a, b) {
+  return a + b;
+}
 
-if (isNaN(size) || size <= 0) {
-  console.log('Missing size');
+const a = parseInt(process.argv[2]);
+const b = parseInt(process.argv[3]);
+
+if (isNaN(a) || isNaN(b)) {
+  console.log(NaN);
 } else {
-  for (let i = 0; i < size; i++) {
-    let row = '';
-    for (let j = 0; j < size; j++) {
-      row += 'x';
-    }
-    console.log(row);
-  }
+  console.log(add(a, b));
 }
